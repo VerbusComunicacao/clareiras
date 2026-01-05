@@ -55,30 +55,28 @@ async function Header() {
             "Clareiras"
           )}
         </PrismicNextLink>
-        {navigation && navigation.data?.links && (
-          <nav className="flex items-center gap-6 md:gap-10">
-            <ul className="flex flex-wrap gap-6 md:gap-8">
-              {navigation.data.links.map((item) => (
-                <li key={asText(item.label)}>
-                  <PrismicNextLink
-                    field={item.link}
-                    className="font-medium tracking-tight relative group nav-link"
-                    style={{ color: "var(--color-earth-700)" }}
-                  >
-                    <PrismicText field={item.label} />
-                    <span
-                      className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full nav-link-underline"
-                      style={{ backgroundColor: "var(--color-accent)" }}
-                    />
-                  </PrismicNextLink>
-                </li>
-              ))}
-            </ul>
-            <div className="flex items-center gap-4 border-l pl-6" style={{ borderColor: "rgba(232, 223, 208, 0.5)" }}>
-              <SocialLinks />
-            </div>
-          </nav>
-        )}
+        <nav className="flex items-center gap-6 md:gap-10">
+          <ul className="flex flex-wrap items-center gap-6 md:gap-8">
+            {navigation?.data?.links?.map((item) => (
+              <li key={asText(item.label)}>
+                <PrismicNextLink
+                  field={item.link}
+                  className="font-medium tracking-tight relative group nav-link"
+                  style={{ color: "var(--color-earth-700)" }}
+                >
+                  <PrismicText field={item.label} />
+                  <span
+                    className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full nav-link-underline"
+                    style={{ backgroundColor: "var(--color-accent)" }}
+                  />
+                </PrismicNextLink>
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-center gap-4 border-l pl-6" style={{ borderColor: "rgba(232, 223, 208, 0.5)" }}>
+            <SocialLinks />
+          </div>
+        </nav>
       </div>
     </Bounded>
   );
