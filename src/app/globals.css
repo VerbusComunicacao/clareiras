@@ -215,3 +215,11 @@ h1, h2, h3, h4, h5, h6 {
 .blog-prose li:last-child {
   margin-bottom: 0;
 }
+
+.social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.4s ease;
+}
