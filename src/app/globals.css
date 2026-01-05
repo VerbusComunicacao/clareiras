@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  
+  /* Cores terrosas */
+  --color-earth-50: #faf8f5;
+  --color-earth-100: #f5f1ea;
+  --color-earth-200: #e8dfd0;
+  --color-earth-300: #d4c4ab;
+  --color-earth-400: #b89f7a;
+  --color-earth-500: #9d7f5a;
+  --color-earth-600: #7d6548;
+  --color-earth-700: #5f4d3a;
+  --color-earth-800: #42362a;
+  --color-earth-900: #2a2119;
+  
+  --color-accent: #8b6f47;
+  --color-accent-light: #a6895f;
+  --color-accent-dark: #6b5535;
+}
+
+* {
+  @apply transition-colors;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  background-color: var(--color-earth-50);
+  color: var(--color-earth-900);
+  @apply antialiased;
+}
+
+/* Animações personalizadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Estilo para links */
+a {
+  color: var(--color-earth-700);
+  transition: color 0.4s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Estilo para headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-earth-900);
+  @apply font-semibold;
+}
+
+/* Estilos para cards do blog */
+.blog-card {
+  border-color: rgba(232, 223, 208, 0.5);
+  transition: border-color 0.4s ease-in-out, box-shadow 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+  border-color: rgba(139, 111, 71, 0.5);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.blog-card-image {
+  transform: scale(1);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.blog-card:hover .blog-card-image {
+  transform: scale(1.05);
+}
+
+.blog-card-title {
+  color: var(--color-earth-900);
+  transition: color 0.2s ease-in-out;
+}
+
+.blog-card:hover .blog-card-title {
+  color: var(--color-accent);
+}
+
+/* Estilos para header */
+.header-logo {
+  color: var(--color-earth-900);
+  transition: color 0.4s ease-in-out;
+}
+
+.header-logo:hover {
+  color: var(--color-accent);
+}
+
+.nav-link {
+  color: var(--color-earth-700);
+  transition: color 0.4s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-link-underline {
+  transition: width 0.4s ease-in-out;
+}
+
+/* Estilos para links no conteúdo */
+.prose-link {
+  color: var(--color-accent);
+  transition: color 0.4s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+.prose-link:hover {
+  color: var(--color-accent-dark);
+}
+
+/* Estilos para conteúdo do blog (prose) */
+.blog-prose {
+  --tw-prose-headings: var(--color-earth-900);
+  --tw-prose-body: var(--color-earth-700);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-earth-900);
+  --tw-prose-bullets: var(--color-earth-700);
+}
+
+.blog-prose h1,
+.blog-prose h2,
+.blog-prose h3,
+.blog-prose h4,
+.blog-prose h5,
+.blog-prose h6 {
+  color: var(--color-earth-900);
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.blog-prose h1:first-child,
+.blog-prose h2:first-child,
+.blog-prose h3:first-child,
+.blog-prose h4:first-child,
+.blog-prose h5:first-child,
+.blog-prose h6:first-child {
+  margin-top: 0;
+}
+
+.blog-prose p {
+  color: var(--color-earth-700);
+  margin-bottom: 1.25em;
+  line-height: 1.75;
+}
+
+.blog-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-prose a {
+  color: var(--color-accent);
+  transition: color 0.4s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+.blog-prose a:hover {
+  text-decoration: underline;
+  color: var(--color-accent-dark);
+}
+
+.blog-prose strong {
+  color: var(--color-earth-900);
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  color: var(--color-earth-700);
+  margin-bottom: 1.25em;
+  padding-left: 1.5em;
+}
+
+.blog-prose li {
+  margin-bottom: 0.5em;
+}
+
+.blog-prose li:last-child {
+  margin-bottom: 0;
+}
