@@ -1,19 +1,22 @@
-# Prismic + Next.js Multi-Page Starter
+# 🌿 Clareiras
 
-Want to see an example of a multi-page website using [Prismic][prismic] and [Next.js][nextjs]? Look no further! This project provides all the code you need for a personal website with a homepage, information pages, and navigation.
+Bem-vindo ao **Clareiras**, um projeto web moderno e elegante desenvolvido com **Next.js** e **Prismic CMS**. Mais do que um simples site, o Clareiras é uma experiência digital focada em clareza, estética minimalista e conteúdo dinâmico.
 
-- **Demo**: [Open live demo][live-demo]
-- **Learn more about Prismic and Next.js**: [Prismic Next.js Documentation][prismic-docs]
+O projeto utiliza uma paleta de cores terrosas e tipografia refinada para criar uma atmosfera de serenidade e conexão, ideal para blogs, portfólios ou sites informativos que prezam pela experiência do usuário e legibilidade.
 
-&nbsp;
+### ✨ Principais Características
 
-<img src="https://user-images.githubusercontent.com/8601064/166617932-eaaa1643-f086-4909-9868-56234f8da98d.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
+- **Arquitetura Moderna**: Desenvolvido com Next.js 16+, utilizando App Router e componentes de servidor para máxima performance.
+- **Gerenciamento de Conteúdo**: Integrado ao Prismic CMS, permitindo edições dinâmicas via Slice Machine sem tocar no código.
+- **Design Terroso & Premium**: Estilização personalizada com Tailwind CSS e variáveis de tema focadas em tons naturais e orgânicos.
+- **Performance & SEO**: Totalmente otimizado para motores de busca e carregamento ultra-rápido.
+- **Preview em Tempo Real**: Visualize suas alterações no Prismic instantaneamente antes de publicar.
 
 &nbsp;
 
 ## 🚀 Quick Start
 
-To start a new project using this starter, run the following commands in your terminal:
+Para iniciar um novo projeto com este starter, execute os seguintes comandos no terminal:
 
 ```sh
 npx degit prismicio-community/nextjs-starter-prismic-multi-page your-project-name
@@ -21,25 +24,25 @@ cd your-project-name
 npx @slicemachine/init@latest
 ```
 
-The commands will do the following:
+Estes comandos irão:
 
-1. Start a new Next.js project using this starter.
-2. Ask you to log in to Prismic or [create an account][prismic-sign-up].
-3. Create a new Prismic content repository with sample content.
+1. Iniciar um novo projeto Next.js com este starter.
+2. Solicitar que você faça login no Prismic ou [crie uma conta][prismic-sign-up].
+3. Criar um novo repositório de conteúdo no Prismic com conteúdo de exemplo.
 
-When you're ready to start your project, run the following command:
+Quando você estiver pronto para iniciar seu projeto, execute o seguinte comando:
 
 ```sh
 npm run dev
 ```
 
-## Documentation
+## Documentação
 
-To learn how to work with your new project, [**see this starter's docs**][starter-docs].
+Para aprender como trabalhar com seu novo projeto, [**veja a documentação deste starter**][starter-docs].
 
-To learn more about working with Prismic, [**see the Prismic docs**][prismic-docs].
+Para aprender mais sobre como trabalhar com o Prismic, [**veja a documentação do Prismic**][prismic-docs].
 
-## License
+## Licença
 
 ```
 Copyright 2013-2022 Prismic <contact@prismic.io> (https://prismic.io)
