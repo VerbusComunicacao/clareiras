@@ -1,0 +1,8 @@
+{
+  "id": "video_post",
+  "name": "video_post",
+  "display": "Vídeo",
+  "description": "Postagens de vídeo do canal do YouTube",
+  "format": "custom",
+  "repeatable": true
+}

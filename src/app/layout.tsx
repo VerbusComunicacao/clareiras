@@ -7,6 +7,7 @@ import { PrismicNextLink, PrismicPreview } from "@prismicio/next";
 
 import { createClient, repositoryName } from "@/prismicio";
 import { Bounded } from "@/components/Bounded";
+import Link from "next/link";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -72,6 +73,18 @@ async function Header() {
                 </PrismicNextLink>
               </li>
             ))}
+            <li>
+              <Link
+                href="/videos"
+                className="font-medium tracking-tight relative group nav-link text-earth-700"
+              >
+                Vídeos
+                <span
+                  className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full nav-link-underline"
+                  style={{ backgroundColor: "var(--color-accent)" }}
+                />
+              </Link>
+            </li>
           </ul>
           <div className="flex items-center gap-4 border-l pl-6" style={{ borderColor: "rgba(232, 223, 208, 0.5)" }}>
             <SocialLinks />

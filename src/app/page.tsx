@@ -6,6 +6,7 @@ import { PostCard } from "@/components/PostCard";
 import { PostCarousel } from "@/components/PostCarousel";
 import { AboutPreview } from "@/components/AboutPreview";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -39,10 +40,16 @@ export default async function Page() {
       {/* Search-like Header / Intro */}
       <Bounded as="section" yPadding="base" className="text-center pt-0">
         <div className="max-w-3xl mx-auto mb-12">
-          <h1
-            className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-earth-900"
-          >
-            Clareiras
+          <h1 className="mb-6">
+            <span className="sr-only">Clareiras</span>
+            <Image
+              src="/clareiras-logo.png"
+              alt="Clareiras Logo"
+              width={500}
+              height={200}
+              className="mx-auto"
+              priority
+            />
           </h1>
           <p
             className="text-xl md:text-2xl text-earth-700 leading-relaxed font-serif italic"
